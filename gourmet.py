@@ -16,7 +16,7 @@ if "authenticated" not in st.session_state:
     st.session_state.authenticated = False
 
 if not st.session_state.authenticated:
-    st.title("🔒 秘密のグルメノート")
+    st.title("🔒 すちゃグルメノート")
     st.info("このページを見るには合言葉が必要です。")
     pwd = st.text_input("合言葉を入力してください", type="password")
     if st.button("ログイン"):
@@ -34,7 +34,7 @@ url = st.secrets["SUPABASE_URL"]
 key = st.secrets["SUPABASE_KEY"]
 supabase: Client = create_client(url, key)
 
-st.title("🍽️ わたしのグルメノート")
+st.title("🍽️ すちゃグルメノート")
 
 tab_input, tab_view, tab_manage = st.tabs(["✍️ 記録する", "📖 眺める・探す", "🗑️ 削除する"])
 
